@@ -1,0 +1,135 @@
+/* Genel stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#ana-kapsayici {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    clear: both;
+}
+
+/* Class seçici örneği */
+.hizmet-kutusu {
+    background-color: #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* ID seçici örneği */
+#hizmetlerimiz {
+    color: #007bff;
+}
+
+/* Tag seçici örneği */
+p {
+    line-height: 1.6;
+}
+
+/* Slider stilleri */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Zemin stili örneği */
+body {
+    background-image: url('../img/arkaplan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    #ana-kapsayici {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

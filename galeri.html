@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogün Nakliyat - Galeri</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <style>
+        /* Yerel stil örneği */
+        .galeri-baslik {
+            color: #333;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .galeri-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .galeri-item {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .galeri-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galeri-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .slider-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 768px) {
+            .galeri-item {
+                width: 100%;
+            }
+
+            .slider-item {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ana Kapsayıcı -->
+    <div id="ana-kapsayici">
+
+        <!-- Üst Kısım -->
+        <header>
+            <nav>
+                <!-- Yatay Menü -->
+                <ul class="yatay-menu">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetler</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- İçerik Alanı -->
+        <main>
+            <h1 class="galeri-baslik">Fotoğraf Galerisi</h1>
+
+            <div class="galeri-container">
+                <div class="galeri-item">
+                    <img src="img/galeri1.jpg" alt="Galeri 1">
+                </div>
+                <div class="galeri-item">
+                    <img src="img/galeri2.jpg" alt="Galeri 2">
+                </div>
+                <div class="galeri-item">
+                    <img src="img/galeri3.jpg" alt="Galeri 3">
+                </div>
+                <div class="galeri-item">
+                    <img src="img/galeri4.jpg" alt="Galeri 4">
+                </div>
+                <div class="galeri-item">
+                    <img src="img/galeri5.jpg" alt="Galeri 5">
+                </div>
+                <div class="galeri-item">
+                    <img src="img/galeri6.jpg" alt="Galeri 6">
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Alt Kısım -->
+        <footer>
+            <p>&copy; 2024 Ogün Nakliyat</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % sliderItems.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+
+</html>

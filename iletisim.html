@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogün Nakliyat - İletişim</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <style>
+        /* Yerel stil örneği */
+        .iletisim-baslik {
+            color: #333;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .iletisim-formu {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-grup {
+            margin-bottom: 15px;
+        }
+
+        .form-grup label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-grup input[type="text"],
+        .form-grup input[type="password"],
+        .form-grup textarea,
+        .form-grup select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form-grup input[type="checkbox"],
+        .form-grup input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-grup button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-grup button:hover {
+            background-color: #0056b3;
+        }
+
+        .iletisim-bilgileri {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .iletisim-bilgileri p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ana Kapsayıcı -->
+    <div id="ana-kapsayici">
+
+        <!-- Üst Kısım -->
+        <header>
+            <nav>
+                <!-- Yatay Menü -->
+                <ul class="yatay-menu">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetler</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- İçerik Alanı -->
+        <main>
+            <h1 class="iletisim-baslik">İletişim</h1>
+
+            <div class="iletisim-formu">
+                <form action="#" method="post">
+                    <div class="form-grup">
+                        <label for="ad">Adınız Soyadınız:</label>
+                        <input type="text" id="ad" name="ad" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="eposta">E-posta Adresiniz:</label>
+                        <input type="text" id="eposta" name="eposta" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="sifre">Şifre:</label>
+                        <input type="password" id="sifre" name="sifre" required>
+                    </div>
+                    <div class="form-grup">
+                        <label>Cinsiyetiniz:</label>
+                        <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+                        <label for="erkek">Erkek</label>
+                        <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+                        <label for="kadin">Kadın</label>
+                    </div>
+                    <div class="form-grup">
+                        <label>Hizmetlerimizden haberdar olmak ister misiniz?</label>
+                        <input type="checkbox" id="haberdar" name="haberdar" value="evet">
+                        <label for="haberdar">Evet</label>
+                    </div>
+                    <div class="form-grup">
+                        <label for="konu">Konu:</label>
+                        <select id="konu" name="konu">
+                            <option value="nakliyat">Nakliyat</option>
+                            <option value="fiyat">Fiyat Teklifi</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-grup">
+                        <label for="mesaj">Mesajınız:</label>
+                        <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+                    </div>
+                    <div class="form-grup">
+                        <button type="reset">Temizle</button>
+                        <button type="submit">Gönder</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="iletisim-bilgileri">
+                <h2>İletişim Bilgilerimiz</h2>
+                <p>
+                    Adres: Örnek Mah. Örnek Sok. No:123 İstanbul<br>
+                    Telefon: 0212 123 45 67<br>
+                    E-posta: info@ogunnakliyat.com
+                </p>
+            </div>
+        </main>
+
+        <!-- Alt Kısım -->
+        <footer>
+            <p>&copy; 2024 Ogün Nakliyat</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

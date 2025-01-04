@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogün Nakliyat - Ana Sayfa</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <style>
+        /* Yerel stil örneği */
+        .ana-baslik {
+            color: #333;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ana Kapsayıcı -->
+    <div id="ana-kapsayici">
+
+        <!-- Üst Kısım -->
+        <header>
+            <nav>
+                <!-- Yatay Menü -->
+                <ul class="yatay-menu">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetler</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slider-item">
+                    <img src="img/slider1.jpg" alt="Slider 1">
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider2.jpg" alt="Slider 2">
+                </div>
+                <div class="slider-item">
+                    <img src="img/slider3.jpg" alt="Slider 3">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- İçerik Alanı -->
+        <main>
+            <h1 class="ana-baslik">Ogün Nakliyat'a Hoş Geldiniz</h1>
+            <p>
+                Ogün Nakliyat olarak, güvenilir ve profesyonel nakliyat hizmetleri sunuyoruz.
+                <br>
+                <a href="#hizmetlerimiz">Hizmetlerimize göz atın.</a>
+            </p>
+
+            <div class="hizmet-kutusu">
+                <h2 id="hizmetlerimiz">Hizmetlerimiz</h2>
+                <ul>
+                    <li>Evden Eve Nakliyat</li>
+                    <li>Ofis Taşımacılığı</li>
+                    <li>Şehir İçi Nakliyat</li>
+                    <li>Şehirlerarası Nakliyat</li>
+                </ul>
+            </div>
+
+            <div class="resim-kutusu">
+                <img src="img/nakliye.jpg" alt="Nakliyat Aracı">
+            </div><br /><br />
+
+            <div class="video-kutusu">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0MTJ_rsh-_M?si=zX_tq1NB2UOlSdME"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div><br />
+            <div class="iletisim-kutusu">
+                <a href="iletisim.html">İletişim Formuna Git</a>
+            </div>
+
+            <div class="pdf-kutusu">
+                <a href="pdf/nakliyat-sozlesmesi.pdf">Nakliyat Sözleşmesi (PDF)</a>
+            </div>
+
+            <div class="eposta-kutusu">
+                <a href="mailto:info@ogunnakliyat.com">Bize E-posta Gönderin</a>
+            </div>
+
+            <div class="dis-link-kutusu">
+                <a href="https://www.arel.edu.tr">Arel Üniversitesi</a>
+            </div>
+
+        </main>
+
+        <!-- Alt Kısım -->
+        <footer>
+            <p>&copy; 2024 Ogün Nakliyat</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % sliderItems.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+
+</body>
+
+</html>
